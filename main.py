@@ -73,7 +73,7 @@ while True:
 
     try:
         response = openai.chat.completions.create(
-            model="gpt-4", messages=history, temperature=0.3, max_tokens=2000
+            model="gpt-4.1-mini", messages=history
         )
         reply = response.choices[0].message.content
         history.append({"role": "assistant", "content": reply})
